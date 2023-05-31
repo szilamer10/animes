@@ -61,3 +61,11 @@
   align-items: center;
   justify-content: center;
 }
+.search_container{
+  position: relative;
+}
+.customer_icons{
+  position:absolute;
+  right: 30px;
+  top:2px;
+}

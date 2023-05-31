@@ -16,9 +16,8 @@ class Header extends Component {
         <div className = 'header_container'>
           <div className = 'logo'><LogoImage /></div>
           <div className = 'search' onClick = {this.clickHandler}>
-          <div><SearchInput ref={this.componentRef}/> </div>
+          <div><SearchInput ref={this.componentRef}/></div>
           </div>
-          <div className = 'customer_icons'><SearchImage /></div>
         </div>
       </div>
     )

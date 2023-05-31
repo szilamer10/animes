@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { LogoImage, SearchImage } from './Image'
 
 class SearchInput extends Component {
     constructor(props) {
@@ -11,8 +12,9 @@ class SearchInput extends Component {
     }
   render() {
     return (
-      <div>
-        <input type = 'text' ref = {this.inputRef}/>
+      <div className = 'search_container'>
+        <input type = 'text' ref = {this.inputRef} placeholder ='Search' name = 'search'/>
+        <SearchImage />
       </div>
     )
   }
