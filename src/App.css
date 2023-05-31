@@ -75,11 +75,26 @@
   float:right;
   margin-top: -30px;
 }
-.slider{
+.slider img{
   display:none;
   width:100%;
   height: 400px;
 }
-.active.slider{
+.active.slider img{
   display:block;
+}
+.slider-arrows span:first-child{
+  position:absolute;
+  left:0;
+}
+.slider-arrows span:last-child{
+  position:absolute;
+  right: 0;
+}
+.slider-arrows{
+  top:50%;
+  position:absolute
+}
+.slider-arrows span{
+  font-size: 16px;;
 }

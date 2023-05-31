@@ -6,8 +6,10 @@ import { faCoffee, faChevronLeft, faChevronRight } from '@fortawesome/free-solid
 class Slider extends Component {
   render() {
     return (
-      <div>
-        <div className = 'slider-arrows'><FontAwesomeIcon icon={ faChevronLeft } /></div>
+      <div className='slider_container'>
+        <div className = 'slider-arrows'>
+          <span><FontAwesomeIcon icon={ faChevronLeft } /></span> 
+          <span><FontAwesomeIcon icon={ faChevronRight } /></span></div>
         {SliderData.map((slide, index) => {  //index-> iteration counter
             return(<div className =  {index == 0 ? 'active slider' : 'slider'}    key = {index}><img  src = {slide.image} alt = {slide.alt}/></div>);
         })}
