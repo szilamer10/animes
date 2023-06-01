@@ -32,74 +32,122 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
 }
-.header{
-  width:100%;
-  border-bottom:2px solid black;
+
+.header {
+  width: 100%;
+  border-bottom: 2px solid black;
   height: 100px;
 }
-.logo img{
-  width:200px;
+
+.logo img {
+  width: 200px;
   height: 100px;
-  float:left;
+  float: left;
 }
-.header_container{
+
+.header_container {
   width: 100%;
   /* display: flex; */
 }
-.search input{
-  width:400px;
+
+.search input {
+  width: 400px;
   margin-left: 20px;
   margin-right: 20px;
-  padding:12px 20px;
-  margin-top:18px;
+  padding: 12px 20px;
+  margin-top: 18px;
 }
-.search{
+
+.search {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-.search_container{
+
+.search_container {
   position: relative;
 }
-.customer_icons{
-  position:absolute;
+
+.customer_icons {
+  position: absolute;
   right: 30px;
-  top:25px;
+  top: 25px;
 }
-.header_registration{
-  float:right;
+
+.header_registration {
+  float: right;
   margin-top: -30px;
 }
-.slider img{
-  display:none;
-  width:100%;
+
+.slider img {
+  display: none;
+  width: 100%;
   height: 400px;
 }
-.active.slider img{
-  display:block;
+
+.active.slider img {
+  display: block;
 }
-.slider-arrows span:first-child{
-  position:absolute;
-  left:0;
+
+.slider-arrows span:first-child {
+  position: absolute;
+  left: 0;
   margin-left: 20px;
 }
-.slider-arrows span:last-child{
-  position:absolute;
+
+.slider-arrows span:last-child {
+  position: absolute;
   right: 0;
   margin-right: 20px;
 }
-.slider-arrows{
-  top:30%;
-  position:absolute;
+
+.slider-arrows {
+  top: 30%;
+  position: absolute;
   width: 100%;
 }
-.slider-arrows span{
+
+.slider-arrows span {
   font-size: 28px;
   cursor: pointer;
-  color:white
+  color: white
+}
+
+.movieSuggestionsContainer {
+  margin-top: 20px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+}
+
+.movieImages {
+  max-width: 350px;
+  height: 400px;
+}
+.movieImages img{
+  width: 100%;
+  max-height: 400px;
+  cursor: pointer;
+}
+
+.movieContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+#root{
+  color:white;
+  background-color: black;
+}
+.suggestionsContainer > h3{
+  text-align:left;
+  font-size:25px;
+  margin-left:25px;
 }
