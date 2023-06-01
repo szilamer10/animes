@@ -86,15 +86,20 @@
 .slider-arrows span:first-child{
   position:absolute;
   left:0;
+  margin-left: 20px;
 }
 .slider-arrows span:last-child{
   position:absolute;
   right: 0;
+  margin-right: 20px;
 }
 .slider-arrows{
-  top:50%;
-  position:absolute
+  top:30%;
+  position:absolute;
+  width: 100%;
 }
 .slider-arrows span{
-  font-size: 16px;;
+  font-size: 28px;
+  cursor: pointer;
+  color:white
 }
