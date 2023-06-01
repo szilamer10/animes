@@ -1,18 +1,11 @@
-import React, { useState } from 'react'
-import { MoviesData } from './MoviesData';
-const MovieDetail = () => {
-    const [clickedMovie, setClickedMovie] = useState();
-    const movieLength = MoviesData.length;
+import React from 'react'
+const MovieDetail = ({movie, onClose}) => {
 
-    const openSlider = () => {
-        // setClickedMovie(clickedMovie)
-        console.log(clickedMovie);
-    }
-
+    console.log(movie);
     return (
         <div className='moviePopup'>
-            {MoviesData.map((movie, index) => {
-                <div className='moviePopupContainer' key={index}>
+            
+                <div className='moviePopupContainer' key={movie.id}>
                     <img src={movie.image} />
                     <span>{movie.title}</span>
                     <div className = 'movieDetails'>
@@ -27,9 +20,9 @@ const MovieDetail = () => {
                         <span>Publicated at:</span>
                         <span>{movie.publicated_at}</span>
                     </div>
+                    <button onClick={onClose}>X</button>
                     
                 </div>
-            })}
         </div>
     )
 }
