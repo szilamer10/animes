@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { LogoImage, SearchImage } from './Image'
 import SearchInput from './SearchInput'
+import { Link } from 'react-router-dom'
 class Header extends Component {
   constructor(props) {
     super(props)
@@ -15,8 +16,12 @@ class Header extends Component {
       <div className="header">
         <div className='header_container'>
           <div className='logo'>
+          <Link to="/">
             <LogoImage />
+            </Link>
+            <Link to="/movies">
             <div className='header_links'>Movies</div>
+            </Link>
           </div>
           <div className='search' onClick={this.clickHandler}>
             <div><SearchInput ref={this.componentRef} /></div>

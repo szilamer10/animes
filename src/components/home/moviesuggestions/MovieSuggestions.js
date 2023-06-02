@@ -10,11 +10,11 @@ const MovieSuggestions = () => {
     const closeClickedMovie = () => {
         setClickedMovie(null)
     }
-    console.log(clickedMovie); //erre visszaadta a rakattintott filmnek az objektumat
+    // console.log(clickedMovie); //erre visszaadta a rakattintott filmnek az objektumat
         return (
             <div>
             <div className='suggestionsContainer'>
-                <h3>Movies</h3>
+                <h3 className='movieContainerTitle'>Movies</h3>
                 <div className='movieSuggestionsContainer'>
                 <> 
                 {MoviesData.map((movie, index) => {
