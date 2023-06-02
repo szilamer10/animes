@@ -1,28 +1,46 @@
 import React from 'react'
-const MovieDetail = ({movie, onClose}) => {
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faClose } from '@fortawesome/free-solid-svg-icons'
 
-    console.log(movie);
+const MovieDetail = ({ movie, onClose }) => {
+
     return (
-        <div className='moviePopup'>
-            
+        <div className='moviePopupBackground'>
+            <div className='moviePopup'>
+
                 <div className='moviePopupContainer' key={movie.id}>
+                    <FontAwesomeIcon icon={faClose} onClick={onClose} />
                     <img src={movie.image} />
-                    <span>{movie.title}</span>
-                    <div className = 'movieDetails'>
-                        <span>Genre:</span>
-                        <span>{movie.genre}</span>
+                    <div className='movieDetailsTitle'><span>{movie.title}</span></div>
+                    <div className='movieDetails'>
+                        <span className='movieDetailsDescription'>{movie.description.substring(0, 200) + '...'}</span>
                     </div>
-                    <div className = 'movieDetails'>
-                        <span>Actors:</span>
-                        <span>{movie.actors}</span>
+                    <div className='movieDetailsShortInfo'>
+                        <div>
+                            <div className='movieDetails'>
+                                <span>Duration:</span>
+                                <span>{movie.duration}</span>
+                            </div>
+                            <div className='movieDetails'>
+                                <span>Genre:</span>
+                                <span>{movie.genre}</span>
+                            </div>
+                        </div>
+                        <div>
+                            <div className='movieDetails'>
+                                <span>Actors:</span>
+                                <span>{movie.actors}</span>
+                            </div>
+                            <div className='movieDetails'>
+                                <span>Publicated at:</span>
+                                <span>{movie.publicated_at}</span>
+                            </div>
+                        </div>
                     </div>
-                    <div className = 'movieDetails'>
-                        <span>Publicated at:</span>
-                        <span>{movie.publicated_at}</span>
-                    </div>
-                    <button onClick={onClose}>X</button>
-                    
+
+
                 </div>
+            </div>
         </div>
     )
 }
