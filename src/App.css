@@ -112,6 +112,14 @@
   position: absolute;
   width: 100%;
 }
+.slider-arrows.category{
+  top:44%;
+  z-index: 2;
+  display: none;
+}
+.slider-arrows.category span{
+  font-size:36px;
+}
 
 .slider-arrows span {
   font-size: 28px;
@@ -233,7 +241,11 @@
   margin-top:20px;
 }
 .movieCategoryContainer  img {
-  width: 150px;
-  margin: 0 15px;
+  width: 178px;
+  margin: 0 29px;
   cursor: pointer;
+}
+
+.movieCategoryContainer:hover  > .slider-arrows.category {
+  display:block;
 }
