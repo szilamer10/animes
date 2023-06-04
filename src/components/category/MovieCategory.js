@@ -2,15 +2,16 @@ import React, { useEffect, useState, useRef } from 'react'
 import axios from 'axios'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons'
-
-
+import Slider from 'react-slick'
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
 const MovieCategory = () => {
   const displayedMovieNumber = 9;
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true)
   const [currentNMovie, setCurrentNMovie ] = useState(displayedMovieNumber);
-  const movieCategoryRef = useRef(null);
-  const [isDataLoaded, setIsDataLoaded] = useState(false);
+  const sliderRef = useRef(null);
+  // const [isDataLoaded, setIsDataLoaded] = useState(false);
   const axiosConfig = {
     headers: {
       client: 'PERS_154',
@@ -38,36 +39,39 @@ const MovieCategory = () => {
   }, [currentNMovie]); //A useEffect hook második paramétere egy tömb, amely felsorolja azokat a változókat vagy állapotokat, amelyekre figyelni szeretnénk. Amikor ezek közül bármelyik változik, újra le fog futni a useEffect-ben lévő függvény.
 
   const changeSliderLeft = () => {
-    setCurrentNMovie(currentNMovie - displayedMovieNumber)
+    setCurrentNMovie(currentNMovie - displayedMovieNumber);
+    sliderRef.current.slickPrev();
   }
   const changeSliderRight = () => {
     setCurrentNMovie(currentNMovie + displayedMovieNumber);
+    sliderRef.current.slickNext();
    
   }
-  useEffect(() => {
-    if (data.length > 0) {
-      setIsDataLoaded(true);
-    }
-  }, [data]);
+  // useEffect(() => {
+  //   if (data.length > 0) {
+  //     setIsDataLoaded(true);
+  //   }
+  // }, [data]);
   
-  useEffect(() => {
-    if (movieCategoryRef.current) {
-      movieCategoryRef.current.scrollIntoView({
-        behavior: 'smooth',
-        block: 'end',
-      });
-    }
-  }, [data]);
+ 
+  const sliderSettings = {
+    slidesToShow: 6,
+    slidesToScroll: 1,
+    infinite: false,
+    // prevArrow: <PrevArrow />,
+    // nextArrow: <NextArrow />,
+  }
 
   return (
     <div>
       <div>
         <span className='movieContainerTitle'>Movies</span>
-        <div className='movieCategoryContainer'  ref={movieCategoryRef}>
-          
+        <div className='movieCategoryContainer' >
+        <Slider {...sliderSettings} ref={sliderRef}>
           {isLoading ? (<p>Loading..</p>) : (
             data.map((movie, index) => {
               return (
+                
                 <div key={index}>
                   {Object.values(movie.images.poster).map((poster, posterIndex) => {
                     return (
@@ -79,6 +83,7 @@ const MovieCategory = () => {
                 </div>
               )
             }))}
+          </Slider>
             <div className='slider-arrows category'>
             <span><FontAwesomeIcon icon={faChevronLeft} onClick={changeSliderLeft} /></span>
             <span><FontAwesomeIcon icon={faChevronRight} onClick={changeSliderRight} /></span>

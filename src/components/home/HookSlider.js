@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { SliderData } from './SliderData'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons'
+import 'bootstrap/dist/css/bootstrap.min.css'; 
 
 // function HookSlider() {
 const HookSlider = () => {

@@ -113,7 +113,7 @@
   width: 100%;
 }
 .slider-arrows.category{
-  top:44%;
+  /* top:44%; */
   z-index: 2;
   display: none;
 }
@@ -237,7 +237,7 @@
   margin-top: 30px;
 }
 .movieCategoryContainer{
-  display:flex;
+  /* display:flex; */
   margin-top:20px;
 }
 .movieCategoryContainer  img {
