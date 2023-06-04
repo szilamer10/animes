@@ -11,7 +11,7 @@ const MovieCategory = () => {
   const [isLoading, setIsLoading] = useState(true)
   const [currentNMovie, setCurrentNMovie ] = useState(displayedMovieNumber);
   const sliderRef = useRef(null);
-  // const [isDataLoaded, setIsDataLoaded] = useState(false);
+
   const axiosConfig = {
     headers: {
       client: 'PERS_154',
@@ -30,6 +30,7 @@ const MovieCategory = () => {
       .then(response => {
         // A kapott adatok beállítása a state-be
         setData(response.data.films);
+        console.log(response.data.films);
         setIsLoading(false);
       })
       .catch(error => {
@@ -39,7 +40,7 @@ const MovieCategory = () => {
   }, [currentNMovie]); //A useEffect hook második paramétere egy tömb, amely felsorolja azokat a változókat vagy állapotokat, amelyekre figyelni szeretnénk. Amikor ezek közül bármelyik változik, újra le fog futni a useEffect-ben lévő függvény.
 
   const changeSliderLeft = () => {
-    setCurrentNMovie(currentNMovie - displayedMovieNumber);
+    // setCurrentNMovie(currentNMovie - displayedMovieNumber);
     sliderRef.current.slickPrev();
   }
   const changeSliderRight = () => {
@@ -47,19 +48,11 @@ const MovieCategory = () => {
     sliderRef.current.slickNext();
    
   }
-  // useEffect(() => {
-  //   if (data.length > 0) {
-  //     setIsDataLoaded(true);
-  //   }
-  // }, [data]);
-  
- 
+
   const sliderSettings = {
     slidesToShow: 6,
     slidesToScroll: 1,
     infinite: false,
-    // prevArrow: <PrevArrow />,
-    // nextArrow: <NextArrow />,
   }
 
   return (
@@ -71,8 +64,9 @@ const MovieCategory = () => {
           {isLoading ? (<p>Loading..</p>) : (
             data.map((movie, index) => {
               return (
-                
+              (Object.keys(movie.images.poster).length > 0) ? ( // ellenorize, hogy van -e length-je az objektumnak
                 <div key={index}>
+                  
                   {Object.values(movie.images.poster).map((poster, posterIndex) => {
                     return (
                       <div key={posterIndex}>
@@ -81,6 +75,7 @@ const MovieCategory = () => {
                     );
                   })}
                 </div>
+              ) : null 
               )
             }))}
           </Slider>
