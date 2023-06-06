@@ -15,12 +15,12 @@ const MovieCategory = () => {
   const axiosConfig = {
     headers: {
       client: 'PERS_154',
-      'x-api-key': 'JOLRrdLujmahEXQuvL5HK3uUDghjJHBPfGqZTcbg',
-      authorization: 'Basic UEVSU18xNTRfWFg6dGNuVnVlMFlkR0Vw',
-      territory: 'XX',
+      'x-api-key': 'WqWrl7g4Am9sOr6pKaI3y5vlr371YFKj8n00Iwda',
+      authorization: 'Basic UEVSU18xNTQ6SjZXUFM1ZFZNNEt2',
+      territory: 'US',
       'api-version': 'v200',
-      geolocation: '-22.0;14.0',
-      'device-datetime': '2023-06-03T06:47:02.228Z',
+      geolocation: '52.47;-1.93',
+      'device-datetime': '2023-06-05T06:47:02.228Z',
       'Content-Type': 'application/json',
     },
   };
