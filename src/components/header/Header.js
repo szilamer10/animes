@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { LogoImage, SearchImage } from './Image'
 import SearchInput from './SearchInput'
 import { Link } from 'react-router-dom'
+import { isMobile } from "react-device-detect";
 class Header extends Component {
   constructor(props) {
     super(props)

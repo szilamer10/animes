@@ -35,7 +35,7 @@ const CommingSoonMovies = () => {
         <div>
             <div>
                 <div>
-                    <span className='movieContainerTitle'>Movies</span>
+                    <span className='movieContainerTitle'>Comming soon</span>
                     <div className='movieCategoryContainer'>
                         {isLoading ? (<p>Loading..</p>) : (
                             data.map((movie, index) => {

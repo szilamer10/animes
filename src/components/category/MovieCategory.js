@@ -58,7 +58,7 @@ const MovieCategory = () => {
   return (
     <div>
       <div>
-        <span className='movieContainerTitle'>Movies</span>
+        <span className='movieContainerTitle'>New movies</span>
         <div className='movieCategoryContainer' >
         <Slider {...sliderSettings} ref={sliderRef}>
           {isLoading ? (<p>Loading..</p>) : (

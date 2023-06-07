@@ -57,10 +57,15 @@
 
 .search input {
   width: 400px;
-  margin-left: 20px;
+  margin-left: -55px;
   margin-right: 20px;
   padding: 12px 20px;
-  margin-top: 18px;
+  margin-top: 24px;
+  border-radius:45px;
+  border: 1px solid black;
+}
+.search input::placeholder{
+ color:#be8121;
 }
 
 .search {
@@ -76,13 +81,16 @@
 
 .customer_icons {
   position: absolute;
-  right: 30px;
-  top: 25px;
+  right: 35px;
+  top: 36px;
 }
 
 .header_registration {
   float: right;
-  margin-top: -30px;
+  margin-top: -35px;
+  color:#be8121;
+  font-weight: 600;
+  margin-right: 20px;
 }
 
 .slider img {
@@ -134,7 +142,6 @@
   margin-top: 20px;
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(4, 25%);
 }
 
 .movieImages {
@@ -145,6 +152,11 @@
   width: 100%;
   max-height: 400px;
   cursor: pointer;
+}
+.movieImages h3{
+  font-size: 22px;
+  margin-top: 5px;
+  font-weight: 300;
 }
 
 .movieContainer {
@@ -163,6 +175,7 @@
   margin-left:25px;
   display: block;
   margin-top: 20px;
+  color: #be8121;
 }
 .moviePopup{
   position: absolute;
@@ -186,7 +199,7 @@
 }
 .movieDetailsTitle{
   font-size: 22px;
-  color:green;
+  color:#be8121;
   display: none;
 }
 .moviePopupContainer > svg {
@@ -223,9 +236,8 @@
   font-size:13px;
 }
 .movieDetails span:nth-child(2) {
-  color: #002617;
   font-weight: 600;
-  color:green
+  color:#be8121
 }
 .movieDetailsShortInfo{
   display: grid;
@@ -255,4 +267,45 @@
 }
 .moviePopupContainer > a >img {
   cursor: pointer;
+}
+.header_links{
+  color:#be8121;
+  margin-top: 40px;
+  margin-left:60px;
+  font-weight: 600;
+}
+.logo{
+  margin-left:60px;
+}
+@media(min-width: 991px) {
+  .movieContainer > h3{
+    display:none;
+  }
+  .movieSuggestionsContainer{
+  grid-template-columns: repeat(4, 25%);
+  }
+}
+@media(max-width:991px) {
+  .search input{
+    width: unset;
+  }
+  .search_container{display: none;}
+  .search{
+    display: block;
+  }
+  .logo{
+    margin-left:0px;
+  }
+  .slider-arrows{
+    top:33%;
+  }
+  .movieImages{
+    height: unset;
+  }
+  .movieContainer> h3{
+    display:none;
+  }
+  .movieSuggestionsContainer{
+    display: flex;
+  }
 }

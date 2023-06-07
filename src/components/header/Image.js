@@ -1,7 +1,7 @@
 import React from 'react';
 
 const LogoImage = () => {
-  const imagePath = process.env.PUBLIC_URL + '/img/animelogo.jpg';
+  const imagePath = process.env.PUBLIC_URL + '/img/logo_1.jpg';
 
   return (
     <div>
