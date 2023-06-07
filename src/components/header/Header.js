@@ -8,13 +8,31 @@ class Header extends Component {
     super(props)
 
     this.componentRef = React.createRef()
+    this.state = {
+      scrollPositionY: 0,
+      headerName: 'header'
+    }
   }
   clickHandler = () => {
     { this.componentRef.current.focusInput() } //button clickre megkapja a focust,child-parent componensel megoldva
   }
+  componentDidMount() {
+    window.addEventListener("scroll", this.handleScroll);
+  }
+  componentWillUnmount() {
+    window.removeEventListener("scroll", this.handleScroll);
+  }
+  handleScroll = () => {
+    const position = window.pageYOffset;
+    position > 100 ? this.setState({ headerName: 'header sticky-header' }) : this.setState({ headerName: 'header' });
+    this.setState({ scrollPositionY: position });
+  };
   render() {
+    const { scrollPositionY, headerName } = this.state;
+    
     return (
-      <div className="header">
+      <div className={headerName}>
+        
         <div className='header_container'>
           <div className='logo'>
           <Link to="/">

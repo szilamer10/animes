@@ -312,10 +312,11 @@
   .movieSuggestionsContainer {
     grid-template-columns: repeat(4, 25%);
   }
-  .questionContainer{
+
+  .questionContainer {
     max-width: 970px;
-    margin:0 auto;
-    padding:10px 0 20px 0px !important;
+    margin: 0 auto;
+    padding: 10px 0 20px 0px !important;
   }
 }
 
@@ -404,7 +405,7 @@
 
 .questionPrincipalTitle {
   color: #be8121;
-  margin-top:20px;
+  margin-top: 20px;
 }
 
 .question {
@@ -418,10 +419,20 @@
 
 .answer {
   text-align: left;
-  color:#be8121;
+  color: #be8121;
   margin: 0 35px;
   padding: 5px 7px;
 }
-.questionContainer{
+
+.questionContainer {
   padding: 5px 0px 20px 0px;
+}
+
+.sticky-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 5000;
+  background: black;
 }
