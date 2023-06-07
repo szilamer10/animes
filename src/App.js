@@ -4,6 +4,7 @@ import Index from './components/home/Index';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Category from './components/category/Category';
 import VideoPlaying from './components/videoplay/VideoPlaying';
+
 function App() {
   return (
     <div className="App">

@@ -305,7 +305,17 @@
   .movieContainer> h3{
     display:none;
   }
-  .movieSuggestionsContainer{
-    display: flex;
+  .movieSuggestionsContainer, .movieContainer{
+    display: block;
   }
+  .movieSuggestionsContainer .slick-prev{
+    z-index: 4;
+    left:10px;
+  }
+  .movieSuggestionsContainer .slick-next{
+    z-index: 4;
+    right:10px;
+  }
+  .movieSuggestionsContainer .slick-list {margin: 0 -10px;}
+.movieSuggestionsContainer .slick-slide>div {padding: 0 10px;}
 }

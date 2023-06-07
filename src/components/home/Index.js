@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
-// import Slider from './Slider'
-import HookSlider from './HookSlider'
+import HookSlider from './banners/HookSlider'
 import MovieSuggestions from './moviesuggestions/MovieSuggestions'
 
 class Index extends Component {
