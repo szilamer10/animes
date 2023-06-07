@@ -25,7 +25,7 @@ const MovieSuggestions = () => {
             <div className='suggestionsContainer'>
                 <h3 className='movieContainerTitle'>Movies</h3>
                 <div className='movieSuggestionsContainer'>
-                            <MovieListing movies={MoviesData} openClickedMovie={openClickedMovie} /> {/*kod ismetlodes elkerulese erdekeben, movielisting componens leterhozasa, bar a slick-slider nem mukodott jol,ha kulonbozo fileokban volt meghivva es props atadas az alcomponensnek*/}   
+                            <MovieListing movies={MoviesData} openClickedMovie={openClickedMovie} /> {/*kod ismetlodes elkerulese erdekeben, movielisting componens leterhozasa, bar a slick-slider nem mukodott jol,ha kulonbozo fileokban volt meghivva,ezert ismetlem es props atadas az alcomponensnek*/}   
                 </div>
             </div>
 
