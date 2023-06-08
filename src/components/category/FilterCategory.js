@@ -1,22 +1,29 @@
 import React, { useState } from 'react'
+import FilterContainer from './FilterContainer';
 
 const FilterCategory = () => {
     const [openFilterContainer, setOpenFilterContainer] = useState(null)
+
     const clickedFilter = (element) => {
-        setOpenFilterContainer(true);
+        console.log(element);
+        setOpenFilterContainer(element);
     }
+    
   return (
+    <>
     <div className='filterCategoryContainer'>
         <div>
-            <span onClick={() => clickedFilter('fantasy')}>Fantasy</span>
+            <span onClick={() => clickedFilter('Fantasy')}>Fantasy</span>
         </div>
         <div>
-             <span onClick={() => clickedFilter('action')}>Action</span>
+             <span onClick={() => clickedFilter('Action')}>Action</span>
         </div>
         <div>
-             <span onClick={() => clickedFilter('comedy')}>Comedy</span>
+             <span onClick={() => clickedFilter('Comedy')}>Comedy</span>
         </div>
     </div>
+    {openFilterContainer !== null ? <FilterContainer movieType={openFilterContainer} /> : null}
+    </>
   )
 }
 
