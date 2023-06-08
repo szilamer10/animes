@@ -5,6 +5,8 @@ import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons
 import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
+import { isMobile } from "react-device-detect";
+
 const MovieCategory = () => {
   const displayedMovieNumber = 9;
   const [data, setData] = useState([]);
@@ -15,12 +17,12 @@ const MovieCategory = () => {
   const axiosConfig = {
     headers: {
       client: 'PERS_154',
-      'x-api-key': 'WqWrl7g4Am9sOr6pKaI3y5vlr371YFKj8n00Iwda',
-      authorization: 'Basic UEVSU18xNTQ6SjZXUFM1ZFZNNEt2',
-      territory: 'US',
+      'x-api-key': 'JOLRrdLujmahEXQuvL5HK3uUDghjJHBPfGqZTcbg',
+      authorization: 'Basic UEVSU18xNTRfWFg6dGNuVnVlMFlkR0Vw',
+      territory: 'XX',
       'api-version': 'v200',
-      geolocation: '52.47;-1.93',
-      'device-datetime': '2023-06-05T06:47:02.228Z',
+      geolocation: '-22.0;14.0',
+      'device-datetime': '2023-06-06T06:47:02.228Z',
       'Content-Type': 'application/json',
     },
   };
@@ -30,7 +32,7 @@ const MovieCategory = () => {
       .then(response => {
         // A kapott adatok beállítása a state-be
         setData(response.data.films);
-        console.log(response.data.films);
+        // console.log(response.data.films);
         setIsLoading(false);
       })
       .catch(error => {
@@ -40,7 +42,6 @@ const MovieCategory = () => {
   }, [currentNMovie]); //A useEffect hook második paramétere egy tömb, amely felsorolja azokat a változókat vagy állapotokat, amelyekre figyelni szeretnénk. Amikor ezek közül bármelyik változik, újra le fog futni a useEffect-ben lévő függvény.
 
   const changeSliderLeft = () => {
-    // setCurrentNMovie(currentNMovie - displayedMovieNumber);
     sliderRef.current.slickPrev();
   }
   const changeSliderRight = () => {
@@ -48,13 +49,13 @@ const MovieCategory = () => {
     sliderRef.current.slickNext();
    
   }
-
-  const sliderSettings = {
-    slidesToShow: 6,
+  
+  const sliderSettings =  {
+    ...isMobile ? { slidesToShow: 2 } : { slidesToShow: 6 },
     slidesToScroll: 1,
     infinite: false,
   }
-
+  
   return (
     <div>
       <div>
