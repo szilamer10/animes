@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { LogoImage, SearchImage } from '../Image'
+import { SearchImage } from '../Image'
 import { MoviesData } from '../../home/moviesuggestions/MoviesData'
 import SearchContainer from './SearchContainer'
 
@@ -21,7 +21,7 @@ class SearchInput extends Component {
     const searchedWord = event.target.value;
     // console.log(event); 
     const searchResults = MoviesData.filter((movie) =>
-      searchedWord.toLowerCase() != '' && (movie.title.toLowerCase().includes(searchedWord.toLowerCase()) || movie.actors.toLowerCase().includes(searchedWord.toLowerCase()))
+      searchedWord.toLowerCase() !== '' && (movie.title.toLowerCase().includes(searchedWord.toLowerCase()) || movie.actors.toLowerCase().includes(searchedWord.toLowerCase()))
     );
     this.setState({ searchedWord, searchResults });
   }
@@ -35,7 +35,7 @@ class SearchInput extends Component {
           <input type='text' ref={this.inputRef} onChange={this.searchMovies} placeholder='Search' name='search' />
           <SearchImage />
         </div>
-        {searchResults.length != 0 ? <SearchContainer movies={searchResults} /> : null}
+        {searchResults.length !== 0 ? <SearchContainer movies={searchResults} /> : null}
       </div>
     )
   }

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { LogoImage, SearchImage } from './Image'
+import { LogoImage } from './Image'
 import SearchInput from './search/SearchInput'
 import { Link } from 'react-router-dom'
 

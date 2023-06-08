@@ -23,7 +23,7 @@ const HookSlider = () => {
                 <span><FontAwesomeIcon icon={faChevronRight} onClick={changeSliderRight} /></span></div>
             {SliderData.map((slide, index) => {  //index-> iteration counter
                 return (
-                    <div className={index == current ? 'active slider' : 'slider'} key={index}> {index === current && (<img src={slide.image} alt={slide.alt} />)}</div>
+                    <div className={index === current ? 'active slider' : 'slider'} key={index}> {index === current && (<img src={slide.image} alt={slide.alt} />)}</div>
                 );
             })}
         </div>

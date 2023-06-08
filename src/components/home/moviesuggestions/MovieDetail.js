@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faClose } from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom'
@@ -11,7 +11,7 @@ const MovieDetail = ({ movie, onClose }) => {
                 <div className='moviePopupContainer' key={movie.id}>
                     <FontAwesomeIcon icon={faClose} onClick={onClose} />
                     <Link to={`/video/${movie.id}`}>
-                        <img src={movie.image} />
+                        <img src={movie.image} alt = 'Golden Movies'/>
                     </Link>
                     <div className='movieDetailsTitle'><span>{movie.title}</span></div>
                     <div className='movieDetails'>

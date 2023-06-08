@@ -5,7 +5,7 @@ const LogoImage = () => {
 
   return (
     <div>
-      <img src={imagePath} alt="My Image" />
+      <img src={imagePath} alt="Golden Movies Logo" />
     </div>
   );
 };

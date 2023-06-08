@@ -7,7 +7,7 @@ const FilterListing = ({ movies, openClickedMovie, movieType }) => {
   return (
     <>
       {movies.map((movie, index) =>
-        movieType == movie.genre ? (
+        movieType === movie.genre ? (
           <div key={index} className="movieContainer" id={movie.id} onClick={() => openClickedMovie(movie)}>
             <div className="movieImages">
               <img src={movie.image} alt="" />

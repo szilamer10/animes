@@ -70,7 +70,7 @@ const MovieCategory = () => {
                       {Object.values(movie.images.poster).map((poster, posterIndex) => {
                         return (
                           <div key={posterIndex}>
-                            <img src={poster.medium.film_image} />
+                            <img src={poster.medium.film_image} alt ='Golden Movies'/>
                           </div>
                         );
                       })}
