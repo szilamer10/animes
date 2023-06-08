@@ -7,30 +7,30 @@ const CommingSoonMovies = () => {
 
     const axiosConfig = {
         headers: {
-          client: 'PERS_154',
-          'x-api-key': 'JOLRrdLujmahEXQuvL5HK3uUDghjJHBPfGqZTcbg',
-          authorization: 'Basic UEVSU18xNTRfWFg6dGNuVnVlMFlkR0Vw',
-          territory: 'XX',
-          'api-version': 'v200',
-          geolocation: '-22.0;14.0',
-          'device-datetime': '2023-06-03T06:47:02.228Z',
-          'Content-Type': 'application/json',
+            client: 'PERS_154',
+            'x-api-key': 'JOLRrdLujmahEXQuvL5HK3uUDghjJHBPfGqZTcbg',
+            authorization: 'Basic UEVSU18xNTRfWFg6dGNuVnVlMFlkR0Vw',
+            territory: 'XX',
+            'api-version': 'v200',
+            geolocation: '-22.0;14.0',
+            'device-datetime': '2023-06-03T06:47:02.228Z',
+            'Content-Type': 'application/json',
         },
-      };
-      useEffect(() => {
+    };
+    useEffect(() => {
         axios.get('https://api-gate2.movieglu.com/filmsComingSoon/', axiosConfig)
-          .then(response => {
-            // A kapott adatok beállítása a state-be
-            setData(response.data.films);
-    
-            setIsLoading(false);
-          })
-          .catch(error => {
-            // Hiba kezelése
-            console.error(error);
-            setIsLoading(false);
-          });
-      }, []);
+            .then(response => {
+                // A kapott adatok beállítása a state-be
+                setData(response.data.films);
+
+                setIsLoading(false);
+            })
+            .catch(error => {
+                // Hiba kezelése
+                console.error(error);
+                setIsLoading(false);
+            });
+    }, []);
     return (
         <div>
             <div>

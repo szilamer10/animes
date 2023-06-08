@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { LogoImage, SearchImage } from './Image'
-import SearchInput from './SearchInput'
+import SearchInput from './search/SearchInput'
 import { Link } from 'react-router-dom'
 
 class Header extends Component {
@@ -28,18 +28,17 @@ class Header extends Component {
     this.setState({ scrollPositionY: position });
   };
   render() {
-    const { scrollPositionY, headerName } = this.state;
-    
+    const { headerName } = this.state;
+
     return (
       <div className={headerName}>
-        
         <div className='header_container'>
           <div className='logo'>
-          <Link to="/">
-            <LogoImage />
+            <Link to="/">
+              <LogoImage />
             </Link>
             <Link to="/movies">
-            <div className='header_links'>Movies</div>
+              <div className='header_links'>Movies</div>
             </Link>
           </div>
           <div className='search' onClick={this.clickHandler}>

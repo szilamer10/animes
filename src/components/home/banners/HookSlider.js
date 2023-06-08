@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { SliderData } from './SliderData'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons'
-import 'bootstrap/dist/css/bootstrap.min.css'; 
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 // function HookSlider() {
 const HookSlider = () => {
@@ -15,6 +15,7 @@ const HookSlider = () => {
     const changeSliderRight = () => {
         setCurrent(current === sliderLength - 1 ? 0 : current + 1)
     }
+
     return (
         <div className='slider_container'>
             <div className='slider-arrows'>
@@ -22,7 +23,6 @@ const HookSlider = () => {
                 <span><FontAwesomeIcon icon={faChevronRight} onClick={changeSliderRight} /></span></div>
             {SliderData.map((slide, index) => {  //index-> iteration counter
                 return (
-
                     <div className={index == current ? 'active slider' : 'slider'} key={index}> {index === current && (<img src={slide.image} alt={slide.alt} />)}</div>
                 );
             })}

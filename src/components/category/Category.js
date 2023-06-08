@@ -2,7 +2,7 @@ import React from 'react'
 import MovieCategory from './MovieCategory'
 import CommingSoonMovies from './CommingSoonMovies'
 import MovieSuggestions from '../home/moviesuggestions/MovieSuggestions'
-import FilterCategory from './FilterCategory'
+import FilterCategory from './filter/FilterCategory'
 
 function Category() {
     return (

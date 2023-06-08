@@ -6,11 +6,11 @@ import Questions from './questions/Questions'
 class Index extends Component {
   render() {
     return (
-      <div className = 'index_page'>
+      <div className='index_page'>
         <HookSlider />
-        <MovieSuggestions/>
+        <MovieSuggestions />
         <Questions />
-        </div>
+      </div>
     )
   }
 }
