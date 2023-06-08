@@ -53,7 +53,7 @@ export const SeriesData = [
         image:
             'https://art-gallery-emea.api.hbo.com/images/GWukCJAq-nIuHwwEAAAB4/tileburnedin?v=35581d4075702186282AgainModified&size=240x360&compression=medium&protection=false&scaleDownToFit=false&productCode=hboMax&overlayImage=urn:warnermedia:brand:hbo&language=en-us',
         title: 'Batman',
-        genre: 'Action',
+        genre: 'Fantasy',
         actors : ' Adam Sandler',
         duration : '2 h 35min',
         description :'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
@@ -66,7 +66,7 @@ export const SeriesData = [
         image:
             'https://art-gallery-emea.api.hbo.com/images/GXJvkMAU0JIG6gAEAAAIo/tileburnedin?v=59460adf37209e83294816bba00f6842&size=240x360&compression=medium&protection=false&scaleDownToFit=false&productCode=hboMax&overlayImage=urn:warnermedia:brand:hbo&language=en-us',
         title: 'Batman',
-        genre: 'Action',
+        genre: 'Comedy',
         actors : ' Adam Sandler',
         duration : '2 h 35min',
         description :'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
@@ -79,7 +79,7 @@ export const SeriesData = [
         image:
             'https://art-gallery-emea.api.hbo.com/images/GZDVh2QHNCMLCwgEAABQJ/tileburnedin?v=db624515797d23055ace9a322a4252e2&size=240x360&compression=medium&protection=false&scaleDownToFit=false&productCode=hboMax&overlayImage=urn:warnermedia:brand:not-in-a-hub&language=en-us',
         title: 'Batman',
-        genre: 'Action',
+        genre: 'Fantasy',
         actors : ' Adam Sandler',
         duration : '2 h 35min',
         description :'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',

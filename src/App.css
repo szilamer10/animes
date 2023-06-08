@@ -439,3 +439,15 @@
 .movieCategoryContainer.commingSoon{
   display:flex;
 }
+.filterCategoryContainer{
+  display: flex;
+  margin:17px 26px 0px 7px;
+}
+.filterCategoryContainer > div {
+  margin-left:20px;
+  padding: 5px;
+  border: 1px solid white;
+  border-radius: 23px;
+  color: #be8121;
+  cursor: pointer;
+}
