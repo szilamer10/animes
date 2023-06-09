@@ -497,3 +497,11 @@
 .searchContainer {
   left: 0;
 }
+.activeFilter{
+  background: #be8121;
+  color:white;
+  border:1px solid #be8121 !important;
+}
+.activeFilter > span {
+  color: white;
+}
