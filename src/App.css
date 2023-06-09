@@ -63,6 +63,7 @@
   margin-top: 24px;
   border-radius: 45px;
   border: 1px solid black;
+  cursor: pointer;
 }
 
 .search input::placeholder {
@@ -93,6 +94,7 @@
   color: #be8121;
   font-weight: 600;
   margin-right: 20px;
+  cursor: pointer;
 }
 
 .slider img {
@@ -496,6 +498,7 @@
 
 .searchContainer {
   left: 0;
+  z-index: 31;
 }
 .activeFilter{
   background: #be8121;
@@ -504,4 +507,12 @@
 }
 .activeFilter > span {
   color: white;
+}
+.filterCategoryContainer > div:hover{
+  border:1px solid #be8121 !important;
+  color:white;
+}
+.videoPlayingContainer{
+  width: 100%;
+  height: 100vw;
 }

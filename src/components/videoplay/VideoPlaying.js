@@ -4,11 +4,11 @@ import { MoviesData } from '../home/moviesuggestions/MoviesData';
 
 const VideoPlaying = () => {
     const { id } = useParams();
-    console.log(id);
+    // console.log(id);
     return (
-        <div>
+        <div className='videoPlayingContainer'>
             {MoviesData.map(movie => {
-                console.log(movie.id);
+                // console.log(movie.id);
                 return (movie.id == id ?
                     <iframe width="560" height="315" key={movie.video_src} src={movie.video_src} allow='clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'></iframe>
                     : null)
